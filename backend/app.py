@@ -10,7 +10,7 @@ API_KEY = os.environ.get("OPENWEATHER_API_KEY")
 def get_weather():
     city = request.args.get("city")
     if not city:
-        return jsonify({"error": "City parameter is required"}), 400
+        return jsonify({"error": "City parameter required"}), 400
 
     url = f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={API_KEY}&units=metric"
     response = requests.get(url)
