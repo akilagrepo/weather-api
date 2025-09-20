@@ -16,7 +16,7 @@ def get_weather():
     response = requests.get(url)
 
     if response.status_code != 200:
-        return jsonify({"error": "Could not fetch weather"}), response.status_code
+        return jsonify({"error": "Could not fetch weatherrrr"}), response.status_code
 
     data = response.json()
     result = {
